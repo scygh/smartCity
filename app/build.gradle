@@ -1,0 +1,104 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.mob.sdk'
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.scy.android.smartcity"
+        minSdkVersion 23
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    //为了和viewpagerindicator中统一
+    configurations.all {
+        resolutionStrategy.force "com.android.support:support-v4:28.0.0"
+    }
+
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+    implementation project(':slidingmenu')
+    implementation 'com.squareup.okhttp3:okhttp:3.12.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    //implementation 'com.github.JakeWharton:ViewPagerIndicator:2.4.1'
+    implementation project(':viewpagerindicatorlibrary')
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+}
+
+MobSDK {
+    appKey "29d5d9f3f65d0"
+    appSecret "16c666e667a7976d4bc4f2cca14c4116"
+    ShareSDK {
+        devInfo {
+            SinaWeibo {
+                appKey "568898243"
+                appSecret "38a4f8204cc784f81f9f0daaf31e02e3"
+                callbackUri "http://www.sharesdk.cn"
+            }
+            Facebook {
+                appKey "1412473428822331"
+                appSecret "a42f4f3f867dc947b9ed6020c2e93558"
+                callbackUri "https://mob.com"
+            }
+            Twitter {
+                appKey "LRBM0H75rWrU9gNHvlEAA2aOy"
+                appSecret "gbeWsZvA9ELJSdoBzJ5oLKX0TU09UOwrzdGfo9Tg7DjyGuMe8G"
+                callbackUri "http://mob.com"
+            }
+            ShortMessage {}
+            Wechat {
+                appId "wx4868b35061f87885"
+                appSecret "64020361b8ec4c99936c0e3999a9f249"
+                userName "gh_afb25ac019c9"
+                path "pages/index/index.html?id=1"
+                withShareTicket true
+                miniprogramType 2
+            }
+            QQ {
+                appId "100371282"
+                appKey "aed9b0303e3ed1e27bae87c33761161d"
+            }
+            YouDao {
+                hostType "product"
+                appKey "dcde25dca105bcc36884ed4534dab940"
+                appSecret "d98217b4020e7f1874263795f44838fe"
+                callbackUri "http://www.sharesdk.cn"
+            }
+            Alipay {
+                appId "2015072400185895"
+            }
+            Douyin {}
+            WechatMoments {
+                appId "wx4868b35061f87885"
+                appSecret "64020361b8ec4c99936c0e3999a9f249"
+            }
+            WechatFavorite {
+                appId "wx4868b35061f87885"
+                appSecret "64020361b8ec4c99936c0e3999a9f249"
+            }
+        }
+    }
+}

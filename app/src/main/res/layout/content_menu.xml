@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <view.NoScrollerViewPager
+        android:id="@+id/main_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9" />
+
+    <RadioGroup
+        android:id="@+id/main_radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9"
+        android:gravity="center"
+        android:background="#FFF"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_home"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/shouye"
+            android:textColor="@color/content_text"
+            android:drawableTop="@drawable/main_home"
+            android:button="@null"/>
+        <RadioButton
+            android:id="@+id/radio_news"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/newscenter"
+            android:textColor="@color/content_text"
+            android:drawableTop="@drawable/main_newscenter"
+            android:button="@null"/>
+        <RadioButton
+            android:id="@+id/radio_service"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/smartservice"
+            android:textColor="@color/content_text"
+            android:drawableTop="@drawable/main_smartservice"
+            android:button="@null"/>
+        <RadioButton
+            android:id="@+id/radio_gov"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/zw"
+            android:textColor="@color/content_text"
+            android:drawableTop="@drawable/main_gov"
+            android:button="@null"/>
+        <RadioButton
+            android:id="@+id/radio_set"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/set"
+            android:textColor="@color/content_text"
+            android:drawableTop="@drawable/main_setting"
+            android:button="@null"/>
+    </RadioGroup>
+
+</LinearLayout>

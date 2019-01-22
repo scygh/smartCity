@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">智慧城市</string>
+    <string name="shouye">首页</string>
+    <string name="newscenter">新闻中心</string>
+    <string name="smartservice">智慧服务</string>
+    <string name="zw">政务</string>
+    <string name="set">设置</string>
+</resources>
